@@ -88,8 +88,7 @@ on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
 on_message_publish(Message, _Env) ->
   {ok, Pid} = init_mongodb_connect(),
   insert(Pid),
-  io:format("Publish ~s~n", [emqx_message:format(Message)]),
-  {ok, Message}.
+  io:format("Publish ~s~n", [emqx_message:format(Message)]).
 
 on_message_delivered(#{client_id := ClientId}, Message, _Env) ->
   io:format("Delivered message to client(~s): ~s~n", [ClientId, emqx_message:format(Message)]),
