@@ -22,11 +22,11 @@ start(_StartType, _StartArgs) ->
     {ok, Sup} = emqx_plugin_template_sup:start_link(),
     ok = emqx_access_control:register_mod(auth, emqx_auth_demo, []),
     ok = emqx_access_control:register_mod(acl, emqx_acl_demo, []),
-    emqx_plugin_template:load(application:get_all_env()),
+    emqx_message_persistence_mongo:load(application:get_all_env()),
     {ok, Sup}.
 
 stop(_State) ->
     ok = emqx_access_control:unregister_mod(auth, emqx_auth_demo),
     ok = emqx_access_control:unregister_mod(acl, emqx_acl_demo),
-    emqx_plugin_template:unload().
+    emqx_message_persistence_mongo:unload().
 

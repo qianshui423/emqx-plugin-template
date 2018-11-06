@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/.erlang.mk/rebar" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/bson" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/clique" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/cowboy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/cowlib" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/cuttlefish" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/cuttlefish/deps/getopt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/cuttlefish/deps/goldrush" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/cuttlefish/deps/lager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/cuttlefish/deps/neotoma" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/ekka" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/.erlang.mk/rebar" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/clique" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/cowboy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/cowlib" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/cuttlefish" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/ekka" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/esockd" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/gen_rpc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/getopt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/goldrush" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/gproc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/jsx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/lager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/lager_syslog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/neotoma" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/ranch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/ssl_verify_fun" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/syslog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/esockd" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/gen_rpc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/getopt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/goldrush" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/gproc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/jsx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/lager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/lager_syslog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/mongodb" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/neotoma" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/pbkdf2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/poolboy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/ranch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/ssl_verify_fun" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/syslog" vcs="Git" />
+  </component>
+</project>
