@@ -122,7 +122,7 @@
           <entry key="beam" value="3" />
           <entry key="config" value="2" />
           <entry key="d" value="2" />
-          <entry key="erl" value="21" />
+          <entry key="erl" value="22" />
           <entry key="gitignore" value="1" />
           <entry key="hrl" value="5" />
           <entry key="md" value="2" />
@@ -133,7 +133,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Erlang" value="21" />
+          <entry key="Erlang" value="22" />
           <entry key="Erlang Header" value="5" />
           <entry key="Erlang Terms" value="2" />
           <entry key="Erlang/OTP app" value="2" />
@@ -145,12 +145,12 @@
         <counts>
           <entry key="Makefile" value="20" />
           <entry key="config" value="17" />
-          <entry key="erl" value="295" />
+          <entry key="erl" value="314" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Erlang" value="295" />
+          <entry key="Erlang" value="314" />
           <entry key="Erlang Terms" value="17" />
           <entry key="PLAIN_TEXT" value="20" />
         </counts>
@@ -166,8 +166,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/emqx_message_persistence_mongo.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="59" column="39" lean-forward="true" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+            <state relative-caret-position="329">
+              <caret line="93" column="16" lean-forward="true" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deps/emqx/src/emqx_logger.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -308,7 +317,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541508751328" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541509660814" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -386,12 +395,12 @@
       <workItem from="1541427719841" duration="7497000" />
       <workItem from="1541473732017" duration="2919000" />
       <workItem from="1541484320340" duration="1871000" />
-      <workItem from="1541487563415" duration="10782000" />
+      <workItem from="1541487563415" duration="11431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24298000" />
+    <option name="totallyTimeSpent" value="24947000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -697,10 +706,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/deps/emqx/src/emqx_logger.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/emqx_message_persistence_mongo.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="59" column="39" lean-forward="true" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+        <state relative-caret-position="329">
+          <caret line="93" column="16" lean-forward="true" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
         </state>
       </provider>
     </entry>
