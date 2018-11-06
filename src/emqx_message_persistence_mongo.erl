@@ -86,7 +86,7 @@ on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
   {ok, Message};
 
 on_message_publish(Message, _Env) ->
-  {status, Pid} = init_mongodb_connect(),
+  {ok, Pid} = init_mongodb_connect(),
   insert(Pid),
   io:format("Publish ~s~n", [emqx_message:format(Message)]),
   {ok, Message}.
