@@ -1,7 +1,6 @@
 PROJECT = emqx_persistence_mongo
 PROJECT_DESCRIPTION = EMQ X Plugin Template
 PROJECT_VERSION = 3.0
-PROJECT_MOD = emqx_message_persistence_mongo_app
 
 DEPS = mongodb
 dep_mongodb = git https://github.com/comtihon/mongodb-erlang.git v3.2.0
