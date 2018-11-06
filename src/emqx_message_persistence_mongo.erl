@@ -54,10 +54,14 @@ load(Env) ->
 
 on_client_connected(#{client_id := ClientId}, ConnAck, ConnAttrs, _Env) ->
   emqx_logger:debug("hook connected 成功了~n"),
+  emqx_logger:info("hook connected 成功了~n"),
+  emqx_logger:error("hook connected 成功了~n"),
   io:format("Client(~s) connected, connack: ~w, conn_attrs:~p~n", [ClientId, ConnAck, ConnAttrs]).
 
 on_client_disconnected(#{client_id := ClientId}, ReasonCode, _Env) ->
   emqx_logger:debug("hook disconnected 成功了~n"),
+  emqx_logger:info("hook disconnected 成功了~n"),
+  emqx_logger:error("hook disconnected 成功了~n"),
   io:format("Client(~s) disconnected, reason_code: ~w~n", [ClientId, ReasonCode]).
 
 on_client_subscribe(#{client_id := ClientId}, RawTopicFilters, _Env) ->
@@ -86,11 +90,15 @@ on_session_terminated(#{client_id := ClientId}, ReasonCode, _Env) ->
 %% Transform message and return
 on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
   emqx_logger:debug("hook publish 成功了~n"),
+  emqx_logger:info("hook publish 成功了~n"),
+  emqx_logger:error("hook publish 成功了~n"),
   {ok, Message};
 
 on_message_publish(Message, _Env) ->
   io:format("Publish ~s~n", [emqx_message:format(Message)]),
   emqx_logger:debug("hook publish 成功了~n"),
+  emqx_logger:info("hook publish 成功了~n"),
+  emqx_logger:error("hook publish 成功了~n"),
   {ok, Message}.
 
 on_message_delivered(#{client_id := ClientId}, Message, _Env) ->
