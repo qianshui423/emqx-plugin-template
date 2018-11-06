@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6809ca63-5ed0-426a-8a76-e7d995395c58" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/priv/emqx_persistence_mongo.schema" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/bson/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/bson/Makefile" afterDir="false" />
@@ -37,6 +38,7 @@
       <change beforePath="$PROJECT_DIR$/deps/ssl_verify_fun/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/ssl_verify_fun/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/ssl_verify_fun/src/ssl_verify_fun.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/ssl_verify_fun/src/ssl_verify_fun.app.src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/syslog/src/syslog.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/syslog/src/syslog.app.src" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/emqx_persistence_mongo.config" beforeDir="false" afterPath="$PROJECT_DIR$/etc/emqx_persistence_mongo.config" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,35 +122,38 @@
           <entry key="TODO" value="1" />
           <entry key="app" value="1" />
           <entry key="beam" value="3" />
-          <entry key="config" value="1" />
+          <entry key="config" value="2" />
           <entry key="d" value="1" />
           <entry key="erl" value="7" />
           <entry key="gitignore" value="1" />
           <entry key="hrl" value="1" />
           <entry key="md" value="1" />
           <entry key="mk" value="1" />
+          <entry key="schema" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Erlang" value="7" />
           <entry key="Erlang Header" value="1" />
-          <entry key="Erlang Terms" value="1" />
+          <entry key="Erlang Terms" value="2" />
           <entry key="Erlang/OTP app" value="1" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Makefile" value="19" />
+          <entry key="Makefile" value="20" />
+          <entry key="config" value="17" />
           <entry key="erl" value="140" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Erlang" value="140" />
-          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="Erlang Terms" value="17" />
+          <entry key="PLAIN_TEXT" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -162,8 +167,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="150">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/etc/emqx_persistence_mongo.config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/priv/emqx_persistence_mongo.schema">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -177,11 +200,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rebar.config">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -206,8 +229,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/emqx_message_persistence_mongo_app.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="166">
+              <caret line="14" column="42" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -258,6 +281,8 @@
         <option value="$PROJECT_DIR$/src/emqx_message_persistence_mongo_sup.erl" />
         <option value="$PROJECT_DIR$/src/emqx_message_persistence_mongo_app.erl" />
         <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/etc/emqx_persistence_mongo.config" />
+        <option value="$PROJECT_DIR$/priv/emqx_persistence_mongo.schema" />
       </list>
     </option>
   </component>
@@ -290,6 +315,21 @@
               <item name="emqx_persistence_mongo" type="b2602c69:ProjectViewProjectNode" />
               <item name="emqx_persistence_mongo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="emqx_persistence_mongo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="emqx_persistence_mongo" type="462c0819:PsiDirectoryNode" />
+              <item name="etc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="emqx_persistence_mongo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="emqx_persistence_mongo" type="462c0819:PsiDirectoryNode" />
+              <item name="priv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="emqx_persistence_mongo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="emqx_persistence_mongo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -302,7 +342,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541488783325" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541492316153" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -380,15 +420,16 @@
       <workItem from="1541427719841" duration="7497000" />
       <workItem from="1541473732017" duration="2919000" />
       <workItem from="1541484320340" duration="1871000" />
-      <workItem from="1541487563415" duration="642000" />
+      <workItem from="1541487563415" duration="1881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14158000" />
+    <option name="totallyTimeSpent" value="15397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35864297" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -405,7 +446,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.28219178" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.45890412" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -536,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/etc/emqx_persistence_mongo.config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/erlang.mk">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -619,24 +653,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rebar.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/emqx_message_persistence_mongo_app.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="166">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state relative-caret-position="150">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rebar.config">
+    <entry file="file://$PROJECT_DIR$/etc/emqx_persistence_mongo.config">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priv/emqx_persistence_mongo.schema">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
         </state>
       </provider>
     </entry>
