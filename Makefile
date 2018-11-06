@@ -1,4 +1,4 @@
-PROJECT = emqx_plugin_template
+PROJECT = emqx_persistence_mongo
 PROJECT_DESCRIPTION = EMQ X Plugin Template
 PROJECT_VERSION = 3.0
 

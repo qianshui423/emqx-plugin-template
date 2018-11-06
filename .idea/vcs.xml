@@ -19,6 +19,8 @@
     <mapping directory="$PROJECT_DIR$/deps/emqx/deps/cowboy" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/emqx/deps/cowlib" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/emqx/deps/cuttlefish" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/cuttlefish/deps/getopt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/emqx/deps/cuttlefish/deps/neotoma" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/emqx/deps/ekka" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/emqx/deps/esockd" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/emqx/deps/gen_rpc" vcs="Git" />
