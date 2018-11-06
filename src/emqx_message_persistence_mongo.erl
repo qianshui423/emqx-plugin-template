@@ -13,22 +13,6 @@
 
 -include_lib("mongodb/include/mongoc.hrl").
 
-init_mongodb(Config) ->
-  application:ensure_all_started(mongodb),
-  {ok}.
-
-init_mongodb_connect() ->
-  {ok, Pid} = mongo_api:connect(single, ["localhost:27017"],
-    [{pool_size, 5}, {max_overflow, 10}], [{database, <<"dengyin">>}, {login, <<"dengyin">>}, {password, <<"dengyin">>}]),
-  {ok, Pid}.
-
-insert(Pid, Document) ->
-  mongo_api:insert(Pid, "message", [
-    #{<<"name">> => <<"dengyin">>,
-      <<"home">> => <<"DY的等音">>,
-      <<"haha">> => <<"xixi">>}
-  ]).
-
 %% API
 -export([load/1, unload/0]).
 
@@ -38,6 +22,24 @@ insert(Pid, Document) ->
 -export([on_session_created/3, on_session_resumed/3, on_session_terminated/3]).
 -export([on_session_subscribed/4, on_session_unsubscribed/4]).
 -export([on_message_publish/2, on_message_delivered/3, on_message_acked/3, on_message_dropped/3]).
+-export([description/0]).
+-export([init_mongodb/0, init_mongodb_connect/0, insert/1]).
+
+init_mongodb() ->
+  application:ensure_all_started(mongodb),
+  {ok}.
+
+init_mongodb_connect() ->
+  {ok, Pid} = mongo_api:connect(single, ["localhost:27017"],
+    [{pool_size, 5}, {max_overflow, 10}], [{database, <<"dengyin">>}, {login, <<"dengyin">>}, {password, <<"dengyin">>}]),
+  {ok, Pid}.
+
+insert(Pid) ->
+  mongo_api:insert(Pid, "message", [
+    #{<<"name">> => <<"dengyin">>,
+      <<"home">> => <<"DY的等音">>,
+      <<"haha">> => <<"xixi">>}
+  ]).
 
 %% Called when the plugin application start
 load(Env) ->
@@ -122,3 +124,5 @@ unload() ->
   emqx:unhook('message.delivered', fun ?MODULE:on_message_delivered/3),
   emqx:unhook('message.acked', fun ?MODULE:on_message_acked/3),
   emqx:unhook('message.dropped', fun ?MODULE:on_message_dropped/3).
+
+description() -> "Message Persistence Mongo Module".

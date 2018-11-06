@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6809ca63-5ed0-426a-8a76-e7d995395c58" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/emqx_persistence_mongo.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/bson/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/bson/Makefile" afterDir="false" />
@@ -14,32 +15,6 @@
       <change beforePath="$PROJECT_DIR$/deps/cowlib/erlang.mk" beforeDir="false" afterPath="$PROJECT_DIR$/deps/cowlib/erlang.mk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/ekka/erlang.mk" beforeDir="false" afterPath="$PROJECT_DIR$/deps/ekka/erlang.mk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/ekka/src/ekka.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/ekka/src/ekka.app.src" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/clique/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/clique/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/cowboy/ebin/cowboy.app" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/cowboy/ebin/cowboy.app" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/cowboy/erlang.mk" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/cowboy/erlang.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/cowlib/ebin/cowlib.app" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/cowlib/ebin/cowlib.app" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/cowlib/erlang.mk" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/cowlib/erlang.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/ekka/erlang.mk" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/ekka/erlang.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/ekka/src/ekka.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/ekka/src/ekka.app.src" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/esockd/erlang.mk" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/esockd/erlang.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/esockd/src/esockd.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/esockd/src/esockd.app.src" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/gen_rpc/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/gen_rpc/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/gen_rpc/src/gen_rpc.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/gen_rpc/src/gen_rpc.app.src" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/goldrush/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/goldrush/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/goldrush/src/goldrush.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/goldrush/src/goldrush.app.src" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/gproc/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/gproc/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/gproc/src/gproc.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/gproc/src/gproc.app.src" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/jsx/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/jsx/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/jsx/src/jsx.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/jsx/src/jsx.app.src" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/lager/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/lager/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/lager/src/lager.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/lager/src/lager.app.src" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/lager_syslog/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/lager_syslog/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/lager_syslog/src/lager_syslog.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/lager_syslog/src/lager_syslog.app.src" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/ranch/ebin/ranch.app" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/ranch/ebin/ranch.app" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/ranch/erlang.mk" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/ranch/erlang.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/ssl_verify_fun/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/ssl_verify_fun/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/ssl_verify_fun/src/ssl_verify_fun.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/ssl_verify_fun/src/ssl_verify_fun.app.src" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/emqx/deps/syslog/src/syslog.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/emqx/deps/syslog/src/syslog.app.src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/esockd/erlang.mk" beforeDir="false" afterPath="$PROJECT_DIR$/deps/esockd/erlang.mk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/esockd/src/esockd.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/esockd/src/esockd.app.src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/gen_rpc/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/gen_rpc/Makefile" afterDir="false" />
@@ -63,6 +38,13 @@
       <change beforePath="$PROJECT_DIR$/deps/ssl_verify_fun/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/ssl_verify_fun/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/ssl_verify_fun/src/ssl_verify_fun.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/ssl_verify_fun/src/ssl_verify_fun.app.src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/syslog/src/syslog.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/syslog/src/syslog.app.src" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/emqx_plugin_template.config" beforeDir="false" afterPath="$PROJECT_DIR$/etc/emqx_persistence_mongo.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rebar.config" beforeDir="false" afterPath="$PROJECT_DIR$/rebar.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emqx_acl_demo.erl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emqx_auth_demo.erl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emqx_message_persistence_mongo.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/emqx_message_persistence_mongo.erl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emqx_plugin_template_app.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/emqx_message_persistence_mongo_app.erl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emqx_plugin_template_sup.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/emqx_message_persistence_mongo_sup.erl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +74,7 @@
           <entry key="TODO" value="2" />
           <entry key="app" value="1" />
           <entry key="beam" value="1" />
-          <entry key="config" value="8" />
+          <entry key="config" value="9" />
           <entry key="d" value="2" />
           <entry key="erl" value="36" />
           <entry key="gitignore" value="1" />
@@ -106,7 +88,7 @@
         <counts>
           <entry key="Erlang" value="36" />
           <entry key="Erlang Header" value="9" />
-          <entry key="Erlang Terms" value="8" />
+          <entry key="Erlang Terms" value="9" />
           <entry key="Erlang/OTP app" value="2" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="22" />
@@ -130,28 +112,67 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.spring.boot.mvc.usages" />
     </session>
+    <session id="751787281">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="LICENSE" value="1" />
+          <entry key="Makefile" value="1" />
+          <entry key="TODO" value="1" />
+          <entry key="beam" value="3" />
+          <entry key="config" value="1" />
+          <entry key="d" value="1" />
+          <entry key="erl" value="7" />
+          <entry key="gitignore" value="1" />
+          <entry key="hrl" value="1" />
+          <entry key="md" value="1" />
+          <entry key="mk" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Erlang" value="7" />
+          <entry key="Erlang Header" value="1" />
+          <entry key="Erlang Terms" value="1" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Makefile" value="18" />
+          <entry key="erl" value="140" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Erlang" value="140" />
+          <entry key="PLAIN_TEXT" value="18" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="226">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TODO">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/emqx_message_persistence_mongo.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="38" />
+            <state relative-caret-position="165">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
@@ -159,61 +180,60 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/emqx_cli_demo.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="315">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emqx_acl_demo.erl">
+        <entry file="file://$PROJECT_DIR$/rebar.config">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emqx_auth_demo.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="299">
+                <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deps/cuttlefish/Makefile">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/emqx_message_persistence_mongo_app.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+            <state relative-caret-position="376">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deps/emqx/deps/cuttlefish/Makefile">
+        <entry file="file:///opt/local/lib/erlang/lib/kernel-6.0/src/application.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="143">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emqx_plugin_template_app.erl">
+        <entry file="file://$PROJECT_DIR$/src/emqx_message_persistence_mongo_sup.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emqx_plugin_template_sup.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state relative-caret-position="316">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
@@ -250,7 +270,12 @@
         <option value="$PROJECT_DIR$/src/emqx_plugin_template_app.erl" />
         <option value="$PROJECT_DIR$/deps/cuttlefish/Makefile" />
         <option value="$PROJECT_DIR$/erlang.mk" />
+        <option value="$PROJECT_DIR$/etc/emqx_plugin_template.config" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/emqx_message_persistence_mongo.erl" />
         <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/src/emqx_message_persistence_mongo_sup.erl" />
+        <option value="$PROJECT_DIR$/src/emqx_message_persistence_mongo_app.erl" />
       </list>
     </option>
   </component>
@@ -259,6 +284,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1280" />
@@ -270,36 +301,31 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="emqx-plugin-template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="emqx-plugin-template" type="462c0819:PsiDirectoryNode" />
+              <item name="emqx_persistence_mongo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="emqx_persistence_mongo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="emqx-plugin-template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="emqx-plugin-template" type="462c0819:PsiDirectoryNode" />
+              <item name="emqx_persistence_mongo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="emqx_persistence_mongo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="emqx-plugin-template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="emqx-plugin-template" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541479994533" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541485754700" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -375,18 +401,19 @@
       <workItem from="1541424879598" duration="26000" />
       <workItem from="1541424915725" duration="1203000" />
       <workItem from="1541427719841" duration="7497000" />
-      <workItem from="1541473732017" duration="2343000" />
+      <workItem from="1541473732017" duration="2919000" />
+      <workItem from="1541484320340" duration="1279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11069000" />
+    <option name="totallyTimeSpent" value="12924000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3473344" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3529887" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -401,7 +428,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.33013698" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.28219178" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -412,7 +439,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32956383" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,13 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deps/emqx/include/emqx.hrl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deps/emqx/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -495,21 +515,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/emqx_plugin_template.erl" />
-    <entry file="file:///opt/local/lib/erlang/lib/kernel-6.0/src/application.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="353" selection-start-line="353" selection-end-line="353" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deps/mongodb/src/api/mongo_api.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -518,26 +524,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ebin/emqx_auth_demo.beam" />
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/etc/emqx_plugin_template.config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="185">
-            <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/emqx_plugin_template_SUITE.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -545,65 +531,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rebar.config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/emqx_plugin_template.d">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/deps/cuttlefish/rebar.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erlang.mk">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="151" column="13" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TODO">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emqx_plugin_template_sup.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emqx_plugin_template_app.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emqx_auth_demo.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emqx_acl_demo.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emqx_cli_demo.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -614,13 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deps/emqx/deps/cuttlefish/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deps/cuttlefish/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -628,17 +552,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/emqx_message_persistence_mongo.erl">
+    <entry file="file://$PROJECT_DIR$/deps/emqx/deps/cuttlefish/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="38" />
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/emqx_persistence_mongo.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erlang.mk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="151" column="13" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/emqx_persistence_mongo.d">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TODO">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="299">
+            <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/emqx/include/emqx.hrl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="226">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ebin/emqx_acl_demo.beam">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emqx_auth_demo.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emqx_acl_demo.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rebar.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emqx_cli_demo.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/local/lib/erlang/lib/kernel-6.0/src/application.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emqx_message_persistence_mongo_sup.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emqx_message_persistence_mongo.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emqx_message_persistence_mongo_app.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
         </state>
       </provider>
     </entry>

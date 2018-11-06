@@ -12,22 +12,20 @@
 %% See the License for the specific language governing permissions and
 %% limitations under the License.
 
--module(emqx_acl_demo).
+-module(emqx_message_persistence_mongo_app).
 
--include_lib("emqx/include/emqx.hrl").
+-behaviour(application).
 
-%% ACL callbacks
--export([init/1, check_acl/2, reload_acl/1, description/0]).
+-export([start/2, stop/1]).
 
-init(Opts) ->
-    {ok, Opts}.
+start(_StartType, _StartArgs) ->
+  {ok, Sup} = emqx_message_persistence_mongo_sup:start_link(),
+  ok = emqx_access_control:register_mod(message_persistence_mongo, emqx_message_persistence_mongo, []),
+  emqx_message_persistence_mongo:load(application:get_all_env()),
+  application:ensure_all_started(mongodb),
+  {ok, Sup}.
 
-check_acl({Credentials, PubSub, Topic}, _Opts) ->
-    io:format("ACL Demo: ~p ~p ~p~n", [Credentials, PubSub, Topic]),
-    allow.
-
-reload_acl(_Opts) ->
-    ok.
-
-description() -> "ACL Demo Module".
+stop(_State) ->
+  ok = emqx_access_control:unregister_mod(message_persistence_mongo, emqx_message_persistence_mongo),
+  emqx_message_persistence_mongo:unload().
 
