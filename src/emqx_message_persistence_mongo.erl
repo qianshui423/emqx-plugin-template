@@ -32,7 +32,7 @@ init_mongodb_connect() ->
 insert(Pid) ->
   mongo_api:insert(Pid, <<"message">>, [
     #{<<"name">> => <<"dengyin">>,
-      <<"home">> => <<"DY的等音">>,
+      <<"home">> => <<"hangzhou">>,
       <<"haha">> => <<"xixi">>}
   ]).
 
@@ -86,9 +86,11 @@ on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
   {ok, Message};
 
 on_message_publish(Message, _Env) ->
-  {ok, Pid} = init_mongodb_connect(),
+  {ok, Pid} = mongo_api:connect(single, ["localhost:27017"],
+    [{pool_size, 5}, {max_overflow, 10}], [{database, <<"dengyin">>}, {login, <<"dengyin">>}, {password, <<"dengyin">>}]),
   insert(Pid),
-  io:format("Publish ~s~n", [emqx_message:format(Message)]).
+  io:format("Publish ~s~n", [emqx_message:format(Message)]),
+  {ok, Message}.
 
 on_message_delivered(#{client_id := ClientId}, Message, _Env) ->
   io:format("Delivered message to client(~s): ~s~n", [ClientId, emqx_message:format(Message)]),
