@@ -53,9 +53,11 @@ load(Env) ->
   emqx:hook('message.dropped', fun ?MODULE:on_message_dropped/3, [Env]).
 
 on_client_connected(#{client_id := ClientId}, ConnAck, ConnAttrs, _Env) ->
+  io:format("hook connected 成功了~n"),
   io:format("Client(~s) connected, connack: ~w, conn_attrs:~p~n", [ClientId, ConnAck, ConnAttrs]).
 
 on_client_disconnected(#{client_id := ClientId}, ReasonCode, _Env) ->
+  io:format("hook disconnected 成功了~n"),
   io:format("Client(~s) disconnected, reason_code: ~w~n", [ClientId, ReasonCode]).
 
 on_client_subscribe(#{client_id := ClientId}, RawTopicFilters, _Env) ->
@@ -83,13 +85,12 @@ on_session_terminated(#{client_id := ClientId}, ReasonCode, _Env) ->
 
 %% Transform message and return
 on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
+  io:format("hook publish 成功了~n"),
   {ok, Message};
 
 on_message_publish(Message, _Env) ->
-  {ok, Pid} = mongo_api:connect(single, ["localhost:27017"],
-    [{pool_size, 5}, {max_overflow, 10}], [{database, <<"dengyin">>}, {login, <<"dengyin">>}, {password, <<"dengyin">>}]),
-  insert(Pid),
   io:format("Publish ~s~n", [emqx_message:format(Message)]),
+  io:format("hook publish 成功了~n"),
   {ok, Message}.
 
 on_message_delivered(#{client_id := ClientId}, Message, _Env) ->
