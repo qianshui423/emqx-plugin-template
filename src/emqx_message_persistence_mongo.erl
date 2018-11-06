@@ -30,7 +30,7 @@ init_mongodb_connect() ->
   {ok, Pid}.
 
 insert(Pid) ->
-  mongo_api:insert(Pid, "message", [
+  mongo_api:insert(Pid, <<"message">>, [
     #{<<"name">> => <<"dengyin">>,
       <<"home">> => <<"DY的等音">>,
       <<"haha">> => <<"xixi">>}
