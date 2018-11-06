@@ -23,11 +23,6 @@
 -export([on_session_subscribed/4, on_session_unsubscribed/4]).
 -export([on_message_publish/2, on_message_delivered/3, on_message_acked/3, on_message_dropped/3]).
 -export([description/0]).
--export([init_mongodb/0, init_mongodb_connect/0, insert/1]).
-
-init_mongodb() ->
-  application:ensure_all_started(mongodb),
-  {ok}.
 
 init_mongodb_connect() ->
   {ok, Pid} = mongo_api:connect(single, ["localhost:27017"],
