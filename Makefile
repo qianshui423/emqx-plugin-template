@@ -1,9 +1,11 @@
 PROJECT = emqx_persistence_mongo
-PROJECT_DESCRIPTION = EMQ X Plugin Template
+PROJECT_DESCRIPTION = EMQ X Plugin Message Persistence Mongo
 PROJECT_VERSION = 3.0
+PROJECT_MOD = emqx_message_persistence_mongo_app
 
-DEPS = mongodb
-dep_mongodb = git https://github.com/comtihon/mongodb-erlang.git v3.2.0
+DEPS = mongodb pbkdf2
+dep_mongodb = git https://github.com/comtihon/mongodb-erlang.git master
+dep_pbkdf2 = git https://github.com/comtihon/erlang-pbkdf2 master
 
 BUILD_DEPS = emqx cuttlefish
 dep_emqx = git https://github.com/emqtt/emqttd emqx30

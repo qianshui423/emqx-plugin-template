@@ -1,0 +1,65 @@
+
+=====
+===== LOGGING STARTED Wed Nov  7 20:16:24 CST 2018
+=====
+Exec: /Users/liuxuehao/Documents/blogsite/server/emqx_persistence_mongo/_rel/emqx_persistence_mongo_release/erts-10.0/bin/erlexec -boot /Users/liuxuehao/Documents/blogsite/server/emqx_persistence_mongo/_rel/emqx_persistence_mongo_release/releases/1/emqx_persistence_mongo_release -mode embedded -boot_var ERTS_LIB_DIR /Users/liuxuehao/Documents/blogsite/server/emqx_persistence_mongo/_rel/emqx_persistence_mongo_release/lib -config /Users/liuxuehao/Documents/blogsite/server/emqx_persistence_mongo/_rel/emqx_persistence_mongo_release/releases/1/sys.config -args_file /Users/liuxuehao/Documents/blogsite/server/emqx_persistence_mongo/_rel/emqx_persistence_mongo_release/releases/1/vm.args -pa -- console 
+Root: /Users/liuxuehao/Documents/blogsite/server/emqx_persistence_mongo/_rel/emqx_persistence_mongo_release
+/Users/liuxuehao/Documents/blogsite/server/emqx_persistence_mongo/_rel/emqx_persistence_mongo_release
+heart_beat_kill_pid = 86068
+Erlang/OTP 21 [erts-10.0] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [hipe]
+
+emqx_persistence_mongo 启动啦！
+=CRASH REPORT==== 7-Nov-2018::20:16:24.754710 ===
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.271.0>
+    registered_name: []
+    exception exit: {bad_return,
+                     {{emqx_message_persistence_mongo_app,start,[normal,[]]},
+                      {'EXIT',
+                       {<<"Can't pass authentification">>,
+                        [{mc_auth_logic,scram_sha_1_auth,4,
+                          [{file,"src/connection/mc_auth_logic.erl"},
+                           {line,55}]},
+                         {mc_worker_api,connect,1,
+                          [{file,"src/api/mc_worker_api.erl"},{line,68}]},
+                         {emqx_message_persistence_mongo_app,start,2,
+                          [{file,"src/emqx_message_persistence_mongo_app.erl"},
+                           {line,34}]},
+                         {application_master,start_it_old,4,
+                          [{file,"application_master.erl"},{line,277}]}]}}}}
+      in function  application_master:init/4 (application_master.erl, line 138)
+    ancestors: [<0.270.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.272.0>,normal}]
+    links: [<0.270.0>,<0.222.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 252
+  neighbours: 
+
+Eshell V10.0  (abort with ^G)
+=INFO REPORT==== 7-Nov-2018::20:16:24.757279 ===
+    application: emqx_persistence_mongo
+    exited: {bad_return,
+                {{emqx_message_persistence_mongo_app,start,[normal,[]]},
+                 {'EXIT',
+                     {<<"Can't pass authentification">>,
+                      [{mc_auth_logic,scram_sha_1_auth,4,
+                           [{file,"src/connection/mc_auth_logic.erl"},
+                            {line,55}]},
+                       {mc_worker_api,connect,1,
+                           [{file,"src/api/mc_worker_api.erl"},{line,68}]},
+                       {emqx_message_persistence_mongo_app,start,2,
+                           [{file,
+                                "src/emqx_message_persistence_mongo_app.erl"},
+                            {line,34}]},
+                       {application_master,start_it_old,4,
+                           [{file,"application_master.erl"},{line,277}]}]}}}}
+    type: permanent
+(emqx_persistence_mongo@127.0.0.1)1> {"Kernel pid terminated",application_controller,"{application_start_failure,emqx_persistence_mongo,{bad_return,{{emqx_message_persistence_mongo_app,start,[normal,[]]},{'EXIT',{<<\"Can't pass authentification\">>,[{mc_auth_logic,scram_sha_1_auth,4,[{file,\"src/connection/mc_auth_logic.erl\"},{line,55}]},{mc_worker_api,connect,1,[{file,\"src/api/mc_worker_api.erl\"},{line,68}]},{emqx_message_persistence_mongo_app,start,2,[{file,\"src/emqx_message_persistence_mongo_app.erl\"},{line,34}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,277}]}]}}}}}"}
+Kernel pid terminated (application_controller) ({application_start_failure,emqx_persistence_mongo,{bad_return,{{emqx_message_persistence_mongo_app,start,[normal,[]]},{'EXIT',{<<"Can't pass authentific
+heart: Wed Nov  7 20:16:26 2018: Erlang is crashing .. (waiting for crash dump file)

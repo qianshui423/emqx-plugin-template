@@ -34,6 +34,7 @@
     <mapping directory="$PROJECT_DIR$/deps/emqx/deps/ranch" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/emqx/deps/ssl_verify_fun" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/emqx/deps/syslog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/erlang-pbkdf2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/esockd" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/gen_rpc" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/getopt" vcs="Git" />
@@ -43,6 +44,7 @@
     <mapping directory="$PROJECT_DIR$/deps/lager" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/lager_syslog" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/mongodb" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/mongodb-erlang" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/neotoma" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/pbkdf2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/deps/poolboy" vcs="Git" />
