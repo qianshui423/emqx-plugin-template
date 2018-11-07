@@ -19,6 +19,7 @@
 -export([start/2, stop/1]).
 
 start(_StartType, _StartArgs) ->
+  lager:start(),
   {ok, Sup} = emqx_message_persistence_mongo_sup:start_link(),
   emqx_message_persistence_mongo:load(application:get_all_env()),
   application:ensure_all_started(mongodb),
