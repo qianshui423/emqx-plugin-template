@@ -19,11 +19,16 @@
 -export([start/2, stop/1]).
 
 start(_StartType, _StartArgs) ->
-  lager:start(),
   {ok, Sup} = emqx_message_persistence_mongo_sup:start_link(),
   emqx_message_persistence_mongo:load(application:get_all_env()),
   application:ensure_all_started(mongodb),
-  emqx_logger:error("emqx_message_persistence_mongo 启动成功了~n"),
+  {ok, Pid} = mongo_api:connect(single, ["localhost:27017"],
+    [{pool_size, 5}, {max_overflow, 10}], [{database, <<"dengyin">>}, {login, <<"dengyin">>}, {password, <<"dengyin">>}]),
+  mongo_api:insert(Pid, <<"message">>, [
+    #{<<"name">> => <<"dengyin">>,
+      <<"home">> => <<"hangzhou">>,
+      <<"haha">> => <<"xixi">>}
+  ]),
   {ok, Sup}.
 
 stop(_State) ->
