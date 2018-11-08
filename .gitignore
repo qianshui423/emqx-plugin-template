@@ -12,4 +12,9 @@ rel/example_project
 data/
 emqx_persistence_mongo.d
 .DS_Store
-_rel/
+_rel/*
+rel/
+.DS_Store
+.idea/
+*.d
+*.iml

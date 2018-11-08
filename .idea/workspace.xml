@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6809ca63-5ed0-426a-8a76-e7d995395c58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/mongo_connection_singleton.erl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mongo_connection_singleton.erl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo.erl" beforeDir="false" afterPath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo.erl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo_app.erl" beforeDir="false" afterPath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo_app.erl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/log/erlang.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/log/erlang.log.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/log/erlang.log.3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/log/erlang.log.4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/log/erlang.log.5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/log/run_erl.log" beforeDir="false" afterPath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/log/run_erl.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/releases/1/emqx_persistence_mongo_release.boot" beforeDir="false" afterPath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/releases/1/emqx_persistence_mongo_release.boot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/releases/1/emqx_persistence_mongo_release.script" beforeDir="false" afterPath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/releases/1/emqx_persistence_mongo_release.script" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/bson/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/bson/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/bson/src/bson.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/bson/src/bson.app.src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/clique/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/clique/Makefile" afterDir="false" />
@@ -48,8 +38,6 @@
       <change beforePath="$PROJECT_DIR$/deps/ssl_verify_fun/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/ssl_verify_fun/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/ssl_verify_fun/src/ssl_verify_fun.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/ssl_verify_fun/src/ssl_verify_fun.app.src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/syslog/src/syslog.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/syslog/src/syslog.app.src" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emqx_message_persistence_mongo.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/emqx_message_persistence_mongo.erl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emqx_message_persistence_mongo_app.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/emqx_message_persistence_mongo_app.erl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,14 +156,14 @@
           <entry key="Makefile" value="95" />
           <entry key="config" value="56" />
           <entry key="erl" value="1598" />
-          <entry key="gitignore" value="13" />
+          <entry key="gitignore" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Erlang" value="1598" />
           <entry key="Erlang Terms" value="56" />
-          <entry key="PLAIN_TEXT" value="108" />
+          <entry key="PLAIN_TEXT" value="120" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -234,8 +222,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="225">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -261,8 +249,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo_app.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
+            <state relative-caret-position="339">
+              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -327,9 +315,9 @@
         <option value="$PROJECT_DIR$/src/emqx_message_persistence_mongo.erl" />
         <option value="$PROJECT_DIR$/src/emqx_message_persistence_mongo_app.erl" />
         <option value="$PROJECT_DIR$/src/mongo_connection_singleton.erl" />
-        <option value="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo_app.erl" />
         <option value="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/mongo_connection_singleton.erl" />
         <option value="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo.erl" />
+        <option value="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo_app.erl" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -368,41 +356,6 @@
             <path>
               <item name="emqx_persistence_mongo" type="b2602c69:ProjectViewProjectNode" />
               <item name="emqx_persistence_mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="_rel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="emqx_persistence_mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="emqx_persistence_mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="_rel" type="462c0819:PsiDirectoryNode" />
-              <item name="emqx_persistence_mongo_release" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="emqx_persistence_mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="emqx_persistence_mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="_rel" type="462c0819:PsiDirectoryNode" />
-              <item name="emqx_persistence_mongo_release" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="emqx_persistence_mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="emqx_persistence_mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="_rel" type="462c0819:PsiDirectoryNode" />
-              <item name="emqx_persistence_mongo_release" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="emqx_persistence_mongo-3.0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="emqx_persistence_mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="emqx_persistence_mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="_rel" type="462c0819:PsiDirectoryNode" />
-              <item name="emqx_persistence_mongo_release" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="emqx_persistence_mongo-3.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="emqx_persistence_mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="emqx_persistence_mongo" type="462c0819:PsiDirectoryNode" />
               <item name="priv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -425,7 +378,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541658852283" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541659014229" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -505,18 +458,18 @@
       <workItem from="1541473732017" duration="2919000" />
       <workItem from="1541484320340" duration="1871000" />
       <workItem from="1541487563415" duration="22450000" />
-      <workItem from="1541576942616" duration="17645000" />
+      <workItem from="1541576942616" duration="17806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53611000" />
+    <option name="totallyTimeSpent" value="53772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31987077" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31987077" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -531,7 +484,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29178083" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29863015" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -854,13 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo_app.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -875,10 +821,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo_app.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
     </entry>
