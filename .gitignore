@@ -11,10 +11,13 @@ rel/example_project
 .erlang.mk/
 data/
 emqx_persistence_mongo.d
+
+# IDEA
 .DS_Store
 _rel
 rel
-.DS_Store
-.idea/
+.idea
 *.d
 *.iml
+*/*.iml
+.idea/workspace.xml
