@@ -4,7 +4,10 @@
     <list default="true" id="6809ca63-5ed0-426a-8a76-e7d995395c58" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo.erl" beforeDir="false" afterPath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo.erl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo_app.erl" beforeDir="false" afterPath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo_app.erl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/mongo_connection_singleton.erl" beforeDir="false" afterPath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/mongo_connection_singleton.erl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/releases/1/emqx_persistence_mongo_release.script" beforeDir="false" afterPath="$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/releases/1/emqx_persistence_mongo_release.script" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/bson/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/bson/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/bson/src/bson.app.src" beforeDir="false" afterPath="$PROJECT_DIR$/deps/bson/src/bson.app.src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps/clique/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/deps/clique/Makefile" afterDir="false" />
@@ -214,7 +217,7 @@
         <entry file="file://$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/mongo_connection_singleton.erl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="419">
-              <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+              <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -223,7 +226,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -232,7 +235,7 @@
         <entry file="file://$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo.erl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="188">
-              <caret line="82" column="24" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
+              <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -250,7 +253,7 @@
         <entry file="file://$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo_app.erl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="339">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -378,7 +381,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541659014229" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541659078336" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -458,12 +461,12 @@
       <workItem from="1541473732017" duration="2919000" />
       <workItem from="1541484320340" duration="1871000" />
       <workItem from="1541487563415" duration="22450000" />
-      <workItem from="1541576942616" duration="17806000" />
+      <workItem from="1541576942616" duration="17870000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53772000" />
+    <option name="totallyTimeSpent" value="53836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -810,28 +813,28 @@
     <entry file="file://$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
-          <caret line="82" column="24" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
+          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/mongo_connection_singleton.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
-          <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_rel/emqx_persistence_mongo_release/lib/emqx_persistence_mongo-3.0/src/emqx_message_persistence_mongo_app.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
         </state>
       </provider>
     </entry>

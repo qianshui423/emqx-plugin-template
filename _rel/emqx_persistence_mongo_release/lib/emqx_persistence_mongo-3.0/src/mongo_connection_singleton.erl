@@ -39,7 +39,11 @@ singleton_loop() ->
 
 insert(Document) ->
   Connection = get_mongo_connection(),
-  mc_worker_api:insert(Connection, <<"message">>, Document).
+  mc_worker_api:insert(Connection, <<"message">>, [
+    #{<<"name">> => <<"dengyin">>,
+      <<"home">> => <<"hangzhou">>,
+      <<"haha">> => <<"xixi">>}
+  ]).
 
 %% 获取进程字典的数据库连接示例
 get_mongo_connection() ->

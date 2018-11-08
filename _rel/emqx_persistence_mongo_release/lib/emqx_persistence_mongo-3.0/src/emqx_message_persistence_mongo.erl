@@ -75,11 +75,6 @@ on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
 
 on_message_publish(Message, _Env) ->
   io:format("Publish ~s~n", [emqx_message:format(Message)]),
-  mongo_connection_singleton:get_singleton() ! {insert, [
-    #{<<"name">> => <<"dengyin">>,
-      <<"home">> => <<"hangzhou">>,
-      <<"haha">> => <<"xixi">>}
-  ]},
   mongo_connection_singleton:get_singleton() ! {insert, <<"Test">>},
   {ok, Message}.
 
