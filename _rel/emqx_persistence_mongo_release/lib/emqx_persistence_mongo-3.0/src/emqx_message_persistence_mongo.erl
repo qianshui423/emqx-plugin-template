@@ -14,25 +14,18 @@
 -include_lib("mongodb/include/mongoc.hrl").
 
 %% API
--export([load/2, unload/0]).
+-export([load/1, unload/0]).
 
 %% Hooks functions
 -export([on_client_connected/4, on_client_disconnected/3]).
 -export([on_client_subscribe/3, on_client_unsubscribe/3]).
 -export([on_session_created/3, on_session_resumed/3, on_session_terminated/3]).
 -export([on_session_subscribed/4, on_session_unsubscribed/4]).
--export([on_message_publish/3, on_message_delivered/3, on_message_acked/3, on_message_dropped/3]).
+-export([on_message_publish/2, on_message_delivered/3, on_message_acked/3, on_message_dropped/3]).
 -export([description/0]).
 
-insert(Connection, Document) ->
-  mc_worker_api:insert(Connection, <<"message">>, [
-    #{<<"name">> => <<"dengyin">>,
-      <<"home">> => <<"hangzhou">>,
-      <<"haha">> => <<"xixi">>}
-  ]).
-
 %% Called when the plugin application start
-load(Env, Connection) ->
+load(Env) ->
   emqx:hook('client.connected', fun ?MODULE:on_client_connected/4, [Env]),
   emqx:hook('client.disconnected', fun ?MODULE:on_client_disconnected/3, [Env]),
   emqx:hook('client.subscribe', fun ?MODULE:on_client_subscribe/3, [Env]),
@@ -42,21 +35,15 @@ load(Env, Connection) ->
   emqx:hook('session.subscribed', fun ?MODULE:on_session_subscribed/4, [Env]),
   emqx:hook('session.unsubscribed', fun ?MODULE:on_session_unsubscribed/4, [Env]),
   emqx:hook('session.terminated', fun ?MODULE:on_session_terminated/3, [Env]),
-  emqx:hook('message.publish', fun ?MODULE:on_message_publish/3, [Env], Connection),
+  emqx:hook('message.publish', fun ?MODULE:on_message_publish/2, [Env]),
   emqx:hook('message.delivered', fun ?MODULE:on_message_delivered/3, [Env]),
   emqx:hook('message.acked', fun ?MODULE:on_message_acked/3, [Env]),
   emqx:hook('message.dropped', fun ?MODULE:on_message_dropped/3, [Env]).
 
 on_client_connected(#{client_id := ClientId}, ConnAck, ConnAttrs, _Env) ->
-  emqx_logger:debug("hook connected 成功了~n"),
-  emqx_logger:info("hook connected 成功了~n"),
-  emqx_logger:error("hook connected 成功了~n"),
   io:format("Client(~s) connected, connack: ~w, conn_attrs:~p~n", [ClientId, ConnAck, ConnAttrs]).
 
 on_client_disconnected(#{client_id := ClientId}, ReasonCode, _Env) ->
-  emqx_logger:debug("hook disconnected 成功了~n"),
-  emqx_logger:info("hook disconnected 成功了~n"),
-  emqx_logger:error("hook disconnected 成功了~n"),
   io:format("Client(~s) disconnected, reason_code: ~w~n", [ClientId, ReasonCode]).
 
 on_client_subscribe(#{client_id := ClientId}, RawTopicFilters, _Env) ->
@@ -83,16 +70,17 @@ on_session_terminated(#{client_id := ClientId}, ReasonCode, _Env) ->
   io:format("Session(~s) terminated: ~p.", [ClientId, ReasonCode]).
 
 %% Transform message and return
-on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env, Connection) ->
+on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
   {ok, Message};
 
-on_message_publish(Message, _Env, Connection) ->
+on_message_publish(Message, _Env) ->
   io:format("Publish ~s~n", [emqx_message:format(Message)]),
-  mc_worker_api:insert(Connection, <<"message">>, [
+  mongo_connection_singleton:get_singleton() ! {insert, [
     #{<<"name">> => <<"dengyin">>,
       <<"home">> => <<"hangzhou">>,
       <<"haha">> => <<"xixi">>}
-  ]),
+  ]},
+  mongo_connection_singleton:get_singleton() ! {insert, <<"Test">>},
   {ok, Message}.
 
 on_message_delivered(#{client_id := ClientId}, Message, _Env) ->

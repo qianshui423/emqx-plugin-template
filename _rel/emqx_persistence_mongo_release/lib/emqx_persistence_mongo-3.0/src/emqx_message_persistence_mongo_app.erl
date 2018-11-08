@@ -22,10 +22,11 @@ start(_StartType, _StartArgs) ->
   io:format("emqx_persistence_mongo 启动啦！~n"),
   {ok, Sup} = emqx_message_persistence_mongo_sup:start_link(),
   application:ensure_all_started(mongodb),
-  {ok, Connection} = mc_worker_api:connect([{auth_source, <<"dengyin">>}, {database, <<"dengyin">>}, {login, <<"dengyin">>}, {password, <<"dengyin">>}, {host, "localhost"}, {port, 27017}]),
-  emqx_message_persistence_mongo:load(application:get_all_env(), Connection),
+  %% emqx_message_persistence_mongo:load(application:get_all_env()),
   {ok, Sup}.
 
 stop(_State) ->
-  emqx_message_persistence_mongo:unload().
+  %% emqx_message_persistence_mongo:unload(),
+  mongo_connection_singleton:get_singleton() ! disconnect.
+
 
