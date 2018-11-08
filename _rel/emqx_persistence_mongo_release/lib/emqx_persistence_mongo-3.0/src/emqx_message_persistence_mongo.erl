@@ -14,30 +14,25 @@
 -include_lib("mongodb/include/mongoc.hrl").
 
 %% API
--export([load/1, unload/0]).
+-export([load/2, unload/0]).
 
 %% Hooks functions
 -export([on_client_connected/4, on_client_disconnected/3]).
 -export([on_client_subscribe/3, on_client_unsubscribe/3]).
 -export([on_session_created/3, on_session_resumed/3, on_session_terminated/3]).
 -export([on_session_subscribed/4, on_session_unsubscribed/4]).
--export([on_message_publish/2, on_message_delivered/3, on_message_acked/3, on_message_dropped/3]).
+-export([on_message_publish/3, on_message_delivered/3, on_message_acked/3, on_message_dropped/3]).
 -export([description/0]).
 
-init_mongodb_connect() ->
-  {ok, Pid} = mongo_api:connect(single, ["localhost:27017"],
-    [{pool_size, 5}, {max_overflow, 10}], [{database, <<"dengyin">>}, {login, <<"dengyin">>}, {password, <<"dengyin">>}]),
-  {ok, Pid}.
-
-insert(Pid) ->
-  mongo_api:insert(Pid, <<"message">>, [
+insert(Connection, Document) ->
+  mc_worker_api:insert(Connection, <<"message">>, [
     #{<<"name">> => <<"dengyin">>,
       <<"home">> => <<"hangzhou">>,
       <<"haha">> => <<"xixi">>}
   ]).
 
 %% Called when the plugin application start
-load(Env) ->
+load(Env, Connection) ->
   emqx:hook('client.connected', fun ?MODULE:on_client_connected/4, [Env]),
   emqx:hook('client.disconnected', fun ?MODULE:on_client_disconnected/3, [Env]),
   emqx:hook('client.subscribe', fun ?MODULE:on_client_subscribe/3, [Env]),
@@ -47,7 +42,7 @@ load(Env) ->
   emqx:hook('session.subscribed', fun ?MODULE:on_session_subscribed/4, [Env]),
   emqx:hook('session.unsubscribed', fun ?MODULE:on_session_unsubscribed/4, [Env]),
   emqx:hook('session.terminated', fun ?MODULE:on_session_terminated/3, [Env]),
-  emqx:hook('message.publish', fun ?MODULE:on_message_publish/2, [Env]),
+  emqx:hook('message.publish', fun ?MODULE:on_message_publish/3, [Env], Connection),
   emqx:hook('message.delivered', fun ?MODULE:on_message_delivered/3, [Env]),
   emqx:hook('message.acked', fun ?MODULE:on_message_acked/3, [Env]),
   emqx:hook('message.dropped', fun ?MODULE:on_message_dropped/3, [Env]).
@@ -88,17 +83,16 @@ on_session_terminated(#{client_id := ClientId}, ReasonCode, _Env) ->
   io:format("Session(~s) terminated: ~p.", [ClientId, ReasonCode]).
 
 %% Transform message and return
-on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
-  emqx_logger:debug("hook publish 成功了~n"),
-  emqx_logger:info("hook publish 成功了~n"),
-  emqx_logger:error("hook publish 成功了~n"),
+on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env, Connection) ->
   {ok, Message};
 
-on_message_publish(Message, _Env) ->
+on_message_publish(Message, _Env, Connection) ->
   io:format("Publish ~s~n", [emqx_message:format(Message)]),
-  emqx_logger:debug("hook publish 成功了~n"),
-  emqx_logger:info("hook publish 成功了~n"),
-  emqx_logger:error("hook publish 成功了~n"),
+  mc_worker_api:insert(Connection, <<"message">>, [
+    #{<<"name">> => <<"dengyin">>,
+      <<"home">> => <<"hangzhou">>,
+      <<"haha">> => <<"xixi">>}
+  ]),
   {ok, Message}.
 
 on_message_delivered(#{client_id := ClientId}, Message, _Env) ->

@@ -20,24 +20,11 @@
 
 start(_StartType, _StartArgs) ->
   io:format("emqx_persistence_mongo 启动啦！~n"),
-%%  {ok, Sup} = emqx_message_persistence_mongo_sup:start_link(),
-  %% emqx_message_persistence_mongo:load(application:get_all_env()),
+  {ok, Sup} = emqx_message_persistence_mongo_sup:start_link(),
   application:ensure_all_started(mongodb),
-%%  {ok, Pid} = mongo_api:connect(single, ["localhost:27017"],
-%%    [{pool_size, 5}, {max_overflow, 10}], [{database, <<"dengyin">>}, {login, <<"dengyin">>}, {password, <<"dengyin">>}, {w_mode, safe}]),
-%%  mongo_api:insert(Pid, <<"message">>, [
-%%    #{<<"name">> => <<"dengyin">>,
-%%      <<"home">> => <<"hangzhou">>,
-%%      <<"haha">> => <<"xixi">>}
-%%  ]),
-  %% mc_worker:start_link([{database, <<"dengyin">>}, {login, <<"dengyin">>}, {password, <<"dengyin">>}, {host, "localhost"}, {port, 27017}]),
   {ok, Connection} = mc_worker_api:connect([{auth_source, <<"dengyin">>}, {database, <<"dengyin">>}, {login, <<"dengyin">>}, {password, <<"dengyin">>}, {host, "localhost"}, {port, 27017}]),
-  mc_worker_api:insert(Connection, <<"message">>, [
-    #{<<"name">> => <<"dengyin">>,
-      <<"home">> => <<"hangzhou">>,
-      <<"haha">> => <<"xixi">>}
-  ]),
-  {ok, Connection}.
+  emqx_message_persistence_mongo:load(application:get_all_env(), Connection),
+  {ok, Sup}.
 
 stop(_State) ->
   emqx_message_persistence_mongo:unload().

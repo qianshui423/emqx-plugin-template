@@ -1,8 +1,8 @@
-run_erl [88357] Wed Nov  7 20:16:53 2018
+run_erl [89703] Thu Nov  8 09:53:03 2018
 Args before exec of shell:
-run_erl [88357] Wed Nov  7 20:16:53 2018
+run_erl [89703] Thu Nov  8 09:53:03 2018
 argv[0] = sh
-run_erl [88357] Wed Nov  7 20:16:53 2018
+run_erl [89703] Thu Nov  8 09:53:03 2018
 argv[1] = -c
-run_erl [88357] Wed Nov  7 20:16:53 2018
+run_erl [89703] Thu Nov  8 09:53:03 2018
 argv[2] = exec "/Users/liuxuehao/Documents/blogsite/server/emqx_persistence_mongo/_rel/emqx_persistence_mongo_release/bin/emqx_persistence_mongo_release" "console" '' 

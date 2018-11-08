@@ -1,5 +1,5 @@
 %% coding: utf-8
-%% script generated at {2018,11,7} {20,16,42}
+%% script generated at {2018,11,8} {10,19,23}
 {script,
     {"emqx_persistence_mongo_release","1"},
     [{preLoaded,
