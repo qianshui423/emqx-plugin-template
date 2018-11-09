@@ -78,7 +78,7 @@ on_message_publish(Message, _Env) ->
   MessageMap = #{
     <<"id">> => Message#message.id,
     <<"qos">> => integer_to_binary(Message#message.qos),
-    <<"from">> => atom_to_binary(Message#message.from, utf8),
+    <<"from">> => Message#message.from,
     <<"flags">> => Message#message.flags,
     <<"headers">> => Message#message.headers,
     <<"topic">> => Message#message.topic,
