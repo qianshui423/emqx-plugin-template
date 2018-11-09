@@ -75,11 +75,15 @@ on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
 
 on_message_publish(Message, _Env) ->
   io:format("Publish ~s~n", [emqx_message:format(Message)]),
-  mongo_connection_singleton:get_singleton() ! {insert, [
-    #{<<"name">> => <<"dengyin">>,
-      <<"home">> => <<"hangzhou">>,
-      <<"haha">> => <<"xixi">>}
-  ]},
+  {id = Id, qos = QoS, topic = Topic, from = From, flags = Flags, headers = Headers} = Message,
+  FormatMessage = #{
+    <<"id">> => Id,
+    <<"qos">> => QoS,
+    <<"topic">> => Topic,
+    <<"from">> => From,
+    <<"flags">> => emqx_message:format(Flags),
+    <<"headers">> => emqx_message:format(Headers)},
+  mongo_connection_singleton:get_singleton() ! {insert, FormatMessage},
   {ok, Message}.
 
 on_message_delivered(#{client_id := ClientId}, Message, _Env) ->
