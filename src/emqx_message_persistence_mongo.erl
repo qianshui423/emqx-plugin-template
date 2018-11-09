@@ -75,7 +75,17 @@ on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
 
 on_message_publish(Message, _Env) ->
   io:format("Publish ~s~n", [emqx_message:format(Message)]),
-  mongo_connection_singleton:get_singleton() ! {insert, [Message]},
+  MessageMap = #{
+    <<"id">> => Message#message.id,
+    <<"qos">> => integer_to_binary(Message#message.qos),
+    <<"from">> => atom_to_binary(Message#message.from, utf8),
+    <<"flags">> => Message#message.flags,
+    <<"headers">> => Message#message.headers,
+    <<"topic">> => Message#message.topic,
+    <<"payload">> => Message#message.payload,
+    <<"timestamp">> => integer_to_binary(calendar:datetime_to_gregorian_seconds(calendar:now_to_universal_time(Message#message.timestamp)))
+  },
+  mongo_connection_singleton:get_singleton() ! {insert, [MessageMap]},
   {ok, Message}.
 
 on_message_delivered(#{client_id := ClientId}, Message, _Env) ->
