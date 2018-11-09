@@ -75,14 +75,16 @@ on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
 
 on_message_publish(Message, _Env) ->
   io:format("Publish ~s~n", [emqx_message:format(Message)]),
-  {id = Id, qos = QoS, topic = Topic, from = From, flags = Flags, headers = Headers} = Message,
+  {Id, QoS, Topic, From, Flags, Headers} = Message,
+  FormatFlags = emqx_message:format(Flags),
+  FormatHeaders = emqx_message:format(Headers),
   FormatMessage = #{
-    <<"id">> => Id,
-    <<"qos">> => QoS,
-    <<"topic">> => Topic,
-    <<"from">> => From,
-    <<"flags">> => emqx_message:format(Flags),
-    <<"headers">> => emqx_message:format(Headers)},
+    <<"id">> => <<Id>>,
+    <<"qos">> => <<QoS>>,
+    <<"topic">> => <<Topic>>,
+    <<"from">> => <<From>>,
+    <<"flags">> => <<FormatFlags>>,
+    <<"headers">> => <<FormatHeaders>>},
   mongo_connection_singleton:get_singleton() ! {insert, FormatMessage},
   {ok, Message}.
 
