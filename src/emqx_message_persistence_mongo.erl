@@ -83,13 +83,17 @@ on_message_publish(Message, _Env) ->
     <<"headers">> => Message#message.headers,
     <<"topic">> => Message#message.topic,
     <<"payload">> => Message#message.payload,
-    <<"timestamp">> => integer_to_binary(calendar:datetime_to_gregorian_seconds(calendar:now_to_universal_time(Message#message.timestamp)))
+    <<"timestamp">> => integer_to_binary(calendar:datetime_to_gregorian_seconds(calendar:now_to_universal_time(Message#message.timestamp))),
+    <<"status">> => <<"publish">>
   },
   mongo_connection_singleton:get_singleton() ! {insert, [MessageMap]},
   {ok, Message}.
 
 on_message_delivered(#{client_id := ClientId}, Message, _Env) ->
   io:format("Delivered message to client(~s): ~s~n", [ClientId, emqx_message:format(Message)]),
+  Selector = #{<<"id">> => Message#message.id},
+  Command = #{<<"$set">> => #{<<"status">> => <<"delivered">>}},
+  mongo_connection_singleton:get_singleton() ! {update, Selector, Command},
   {ok, Message}.
 
 on_message_acked(#{client_id := ClientId}, Message, _Env) ->

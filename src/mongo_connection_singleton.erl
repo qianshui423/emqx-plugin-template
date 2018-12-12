@@ -33,6 +33,9 @@ singleton_loop() ->
     {insert, Document} ->
       insert(Document),
       singleton_loop();
+    {update, Selector, Document} ->
+      update(Selector, Document),
+      singleton_loop();
     disconnect ->
       disconnect()
   end.
@@ -40,6 +43,10 @@ singleton_loop() ->
 insert(Document) ->
   Connection = get_mongo_connection(),
   mc_worker_api:insert(Connection, <<"message">>, Document).
+
+update(Selector, Document) ->
+  Connection = get_mongo_connection(),
+  mc_worker_api:update(Connection, <<"message">>, Selector, Document).
 
 %% 获取进程字典的数据库连接示例
 get_mongo_connection() ->
