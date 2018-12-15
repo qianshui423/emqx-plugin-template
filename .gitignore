@@ -10,7 +10,8 @@ rel/example_project
 .rebar
 .erlang.mk/
 data/
-emqx_persistence_mongo.d
+emqx_plugin_template.d
+erlang.mk
 
 # IDEA
 .DS_Store
