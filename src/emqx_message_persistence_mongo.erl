@@ -75,9 +75,9 @@ on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
 
 on_message_publish(Message, _Env) ->
   io:format("Publish ~s~n", [emqx_message:format(Message)]),
-  Id = case Message#message.id of
-         binary -> binary:list_to_bin(integer_to_list(binary:decode_unsigned(Message#message.id)));
-         _ -> <<"">>
+  Id = case is_binary(Message#message.id) of
+         true -> binary:list_to_bin(integer_to_list(binary:decode_unsigned(Message#message.id)));
+         false -> <<"">>
        end,
   MessageMap = #{
     <<"id">> => Id,
