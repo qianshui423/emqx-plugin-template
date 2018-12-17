@@ -95,7 +95,11 @@ on_message_publish(Message, _Env) ->
 
 on_message_delivered(#{client_id := ClientId}, Message, _Env) ->
   io:format("Delivered message to client(~s): ~s~n", [ClientId, emqx_message:format(Message)]),
-  Selector = #{<<"id">> => Message#message.id},
+  Id = case is_binary(Message#message.id) of
+         true -> binary:list_to_bin(integer_to_list(binary:decode_unsigned(Message#message.id)));
+         false -> <<"">>
+       end,
+  Selector = #{<<"id">> => Id},
   Command = #{<<"$set">> => #{<<"status">> => <<"delivered">>}},
   mongo_connection_singleton:get_singleton() ! {update, Selector, Command},
   {ok, Message}.
