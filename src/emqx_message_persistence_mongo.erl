@@ -76,7 +76,7 @@ on_message_publish(Message = #message{topic = <<"$SYS/", _/binary>>}, _Env) ->
 on_message_publish(Message, _Env) ->
   io:format("Publish ~s~n", [emqx_message:format(Message)]),
   MessageMap = #{
-    <<"id">> => binary_to_integer(Message#message.id),
+    <<"id">> => <<binary:decode_unsigned(Message#message.id)>>,
     <<"qos">> => integer_to_binary(Message#message.qos),
     <<"from">> => Message#message.from,
     <<"flags">> => Message#message.flags,
